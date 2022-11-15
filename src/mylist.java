@@ -89,4 +89,10 @@ public class mylist < T > {
         return removedItem;// return removed node data
     }
 
+    public void add(T pink) {
+    }
+
+    public T removeLast() {
+        return null;
+    }
 }
