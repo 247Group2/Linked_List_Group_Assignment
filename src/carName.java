@@ -10,7 +10,7 @@ public class carName extends Throwable {
 
     }
 
-    public void name(){
+    public void name() {
 
         LinkedList<String> list = new LinkedList<>();
 

@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 
-public class mylist < T > {
+public class mylist<T> {
 
     public ListNode<T> first;
     public ListNode<T> last;
@@ -28,18 +28,19 @@ public class mylist < T > {
             current.nextNode = last = new ListNode<T>(insertItem);
         }
     }
-//3.Search for an item by index number (the number of its position in the list) and display the information for that library item.
+
+    //3.Search for an item by index number (the number of its position in the list) and display the information for that library item.
 // Validate that the index number is within bounds and throw an appropriate exception if not: Rabindra Singh
     public T searchItem(int index) throws carName {
         int size = this.size();
-        if(index<0 || index>=size)
+        if (index < 0 || index >= size)
             throw new carName("OUT OF BOUNDS!");
         else {
             ListNode<T> firstNode = null;
-            ListNode<T> temp = firstNode;
-            for(int i=0;i<index;i++)
-                temp = temp.nextNode;
-            return temp.data;
+            ListNode<T> find = firstNode;
+            for (int i = 0; i < index; i++)
+                find = find.nextNode;
+            return find.data;
         }
     }
 
@@ -94,8 +95,6 @@ public class mylist < T > {
         }
         return count;
     }
-
-
 
 
     //remove first node from List
