@@ -65,6 +65,21 @@ public class mylist < T > {
         return count;
     }
 
+// 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
+    public T removeFromEnd() throws NoSuchElementException {
+        if (isEmpty()) {
+            throw new NoSuchElementException(name);
+        }
+        T removedItem = last.data;
+
+        if (last == first) {
+            last = first = null;
+        } else {
+            last = last.nextNode;
+        }
+        return removedItem;
+    }
+
 
     //remove first node from List
     public T removeFromFront() throws NoSuchElementException {
