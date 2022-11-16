@@ -1,6 +1,14 @@
 import java.util.LinkedList;
 
-public class carName {
+public class carName extends Throwable {
+
+    public carName(String s) {
+
+    }
+
+    public carName() {
+
+    }
 
     public void name(){
 

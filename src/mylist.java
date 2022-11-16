@@ -28,6 +28,36 @@ public class mylist < T > {
             current.nextNode = last = new ListNode<T>(insertItem);
         }
     }
+//3.Search for an item by index number (the number of its position in the list) and display the information for that library item.
+// Validate that the index number is within bounds and throw an appropriate exception if not.
+    public T searchItem(int index) throws carName {
+        int size = this.size();
+        if(index<0 || index>=size)
+            throw new carName("OUT OF BOUNDS!");
+        else {
+            ListNode<T> firstNode = null;
+            ListNode<T> temp = firstNode;
+            for(int i=0;i<index;i++)
+                temp = temp.nextNode;
+            return temp.data;
+        }
+    }
+
+    // 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
+    public T removeFromEnd() throws NoSuchElementException {
+        if (isEmpty()) {
+            throw new NoSuchElementException(name);
+        }
+        T removedItem = last.data;
+
+        if (last == first) {
+            last = first = null;
+        } else {
+            last = last.nextNode;
+        }
+        return removedItem;
+    }
+
 
     //determine whether list is empty
     public boolean isEmpty() {
@@ -65,20 +95,7 @@ public class mylist < T > {
         return count;
     }
 
-// 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
-    public T removeFromEnd() throws NoSuchElementException {
-        if (isEmpty()) {
-            throw new NoSuchElementException(name);
-        }
-        T removedItem = last.data;
 
-        if (last == first) {
-            last = first = null;
-        } else {
-            last = last.nextNode;
-        }
-        return removedItem;
-    }
 
 
     //remove first node from List
