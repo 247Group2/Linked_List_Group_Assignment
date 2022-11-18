@@ -132,3 +132,48 @@ public class mylist<T> {
         return null;
     }
 }
+
+// 6: Ameed
+//count nodes in the list
+
+//node structure
+class Node {
+  int data;
+  Node next;
+};
+
+class LinkedList {
+Node head;
+
+LinkedList(){
+  head = null;
+}
+int countNodes() {
+  Node temp = new Node();
+  temp = this.head;
+  int i = 0;
+  while(temp != null) {
+    i++;
+    temp = temp.next;
+  }
+  return i;  
+}
+
+// 7: Ameed
+//display the content of the list
+void PrintList() {
+  Node temp = new Node();
+  temp = this.head;
+  if(temp != null) {
+    System.out.print("The list contains: ");
+    while(temp != null) {
+      System.out.print(temp.data + " ");
+      temp = temp.next;
+    }
+    System.out.println();
+  } else {
+    System.out.println("The list is empty.");
+  }
+}
+}
+
