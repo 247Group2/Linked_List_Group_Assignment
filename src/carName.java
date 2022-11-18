@@ -1,17 +1,10 @@
 import java.util.LinkedList;
 
 public class carName extends Throwable {
-
     public carName(String s) {
-
     }
-
-    public carName() {
-
-    }
-
+/*
     public static void name() {
-
         CarStuff car1 = new CarStuff("Tesla", 2021);
         CarStuff car2 = new CarStuff("Honda", 2016);
         CarStuff car3 = new CarStuff("Chevrolet", 2018);
@@ -30,13 +23,10 @@ public class carName extends Throwable {
 
         System.out.println(carList);
 
-       //carList.addFirst(car6.name + " " + car6.year);
-         //System.out.println("Adding Item to front: " + carList);
+        //adds Item to front of the List
+       carList.addFirst(car6.name + " " + car6.year);
+         System.out.println("Adding Item to front: " + carList);
 
-
-
-
-
-
+ */
     }
-}
+

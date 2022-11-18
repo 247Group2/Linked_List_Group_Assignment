@@ -2,37 +2,60 @@ import java.util.NoSuchElementException;
 
 public class mylist<T> {
 
-    public ListNode < T > first;
-    public ListNode < T > last;
+    public ListNode<T> first;
+    public ListNode<T> last;
 
-    public String name;		// string used in printing
-    public mylist ()  {    // default constructor
-    }
+    public String name;        // string used in printing
+
+    public mylist() {
+    }   // default constructor
+
     //constructor creates an empty List with a name
-    public mylist (String carList)
-    {
-        name = carList;
+    public mylist(String listName) {
+        name = listName;
         first = last = null;
+
+
     }
-        //insert atBack
-    public void insertAtBack(T insertItem)
-    {
-        if (isEmpty ())
-        {
-            first = last = new ListNode < T > (insertItem);
-        }
-        else
-        {
-            ListNode < T > current = first;
-            while (current.nextNode != null)
-            {
+
+    //insert at back
+    public void insertAtBack(T insertItem) {
+        if (isEmpty()) {
+            first = last = new ListNode<T>(insertItem);
+        } else {
+            ListNode<T> current = first;
+            while (current.nextNode != null) {
                 current = current.nextNode;
             }
-            current.nextNode = last = new ListNode < T > (insertItem);
+            current.nextNode = last = new ListNode<T>(insertItem);
         }
     }
 
-    //1.
+    //1.Insert an Item/Node at the front - A.S.
+    public void insertAtFront(T insertItem) {
+        if (isEmpty()) {
+            first = last = new ListNode<T>(insertItem);
+        } else {
+            first = new ListNode<T>(insertItem, first);
+        }
+    }
+
+    //5 - A.S
+    public void removeItem(int index) {
+        try { // Tries the code below
+            ListNode temp = first;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.nextNode;
+            }
+            temp.nextNode = temp.nextNode.nextNode;
+        } catch (Exception e) {
+            System.out.println("Index out of bounds ");
+        }
+    }
+
+
+
+
 
     // 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
     public T removeFromEnd() throws NoSuchElementException {
