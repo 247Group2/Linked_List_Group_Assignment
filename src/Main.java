@@ -13,6 +13,7 @@ public class Main {
         CarStuff car8 = new CarStuff(2020, "Land Rover", "SVR");
         CarStuff car9 = new CarStuff(2014, "Dodge", "Viper");
         CarStuff car10 = new CarStuff(2010, "Ferrari", "458 Italia");
+        CarStuff car11 = new CarStuff(2023, "Rimac", "Nevara");
 
         String vehicle1 = (car1.carYear + " " + car1.carMake + " " + car1.carModel);
         String vehicle2 = (car2.carYear + " " + car2.carMake + " " + car2.carModel);
@@ -24,7 +25,8 @@ public class Main {
         String vehicle8 = (car8.carYear + " " + car8.carMake + " " + car8.carModel);
         String vehicle9 = (car9.carYear + " " + car9.carMake + " " + car9.carModel);
         String vehicle10 = (car10.carYear + " " + car10.carMake + " " + car10.carModel);
-
+        String vehicle11 = (car11.carYear + " " + car11.carMake + " " + car11.carModel);
+        
         mylist<String> carList = new mylist<String>("Car List");
         carList.insert(vehicle1);
         carList.insert(vehicle2);
