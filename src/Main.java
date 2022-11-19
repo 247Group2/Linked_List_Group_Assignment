@@ -13,24 +13,24 @@ public class Main {
         carList.insertAtBack(car1.name1 + car1.year1); //Insert Item into List A.S
         carList.insertAtBack(car2.name1 + car2.year1);// ''
         carList.insertAtBack(car3.name1 + car3.year1);// ''
-        System.out.println("--------------------------------------");
+        System.out.println("----------------------------------------------------------");
         System.out.println("The original Linked List ");
         carList.print(); //prints list
-        System.out.println("--------------------------------------");
+        System.out.println("----------------------------------------------------------");
         System.out.println("Specific Index number: 1 ");
         carList.print(); //prints list
-        System.out.println("--------------------------------------");
+        System.out.println("----------------------------------------------------------");
         System.out.println("The linked list after removing item from the end: ");
         System.out.println("Linked list after: Ford2021 Honda2016 ");
-        System.out.println("--------------------------------------");
+        System.out.println("----------------------------------------------------------");
         carList.insertAtFront(car4.name1 + car4.year1); //inserts item at front of list  Req 1 A.S
         System.out.println("Linked List After adding Item to front ");
         carList.print();
-        System.out.println("--------------------------------------");
+        System.out.println("----------------------------------------------------------");
         carList.removeItem(2); //Removes item at specific index, if index is out of bounds prints "Index out of bounds" A.S.
         System.out.println("Linked List After removing item at index ");
         carList.print();
-        System.out.println("--------------------------------------");
+        System.out.println("----------------------------------------------------------");
 
 
     }
