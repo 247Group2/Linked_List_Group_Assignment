@@ -32,6 +32,13 @@ public class Main {
         carList.print();
         System.out.println("----------------------------------------------------------");
 
+//        4.Insert a node at a specific index number. The code must validate that
+//    the index number is within bounds and throw an appropriate exception if not: Kevin Shields
+        System.out.println("--------------------------------------");
+        carList.insertIndex(1, "PORSCHE") ;
+        System.out.println("Linked List AFTER ADDING item at index ");
+        carList.print();
+
 
     }
 }

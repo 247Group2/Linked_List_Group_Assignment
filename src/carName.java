@@ -20,6 +20,7 @@ public class carName extends Throwable {
         carList.add(car3.name + " " + car3.year);
         carList.add(car4.name + " " + car4.year);
         carList.add(car5.name + " " + car5.year);
+        carList.add(car6.name + " " + car6.year);
 
         System.out.println(carList);
 

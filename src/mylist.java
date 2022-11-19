@@ -90,6 +90,29 @@ public class mylist<T> {
 
     }
 
+    //    4.Insert a node at a specific index number. The code must validate that
+//    the index number is within bounds and throw an appropriate exception if not: Kevin Shields
+
+    public void insertIndex(int index, T insertItem) {
+        ListNode<T> node = new ListNode<T>(insertItem);
+
+        if (index == 1) {
+            node.nextNode = first;
+            first = node;
+        } else {
+            ListNode<T> lastNode = first;
+            int count = 1;
+
+            while (count < index - 1) {
+                lastNode = lastNode.nextNode;
+                count++;
+            }
+            ListNode<T> currentNode = lastNode.nextNode;
+            lastNode.nextNode = node;
+            node.nextNode = currentNode;
+        }
+    }
+
     //determine whether list is empty
     public boolean isEmpty() {
         return first == null;    // return true if list is empty
