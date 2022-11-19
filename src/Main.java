@@ -7,6 +7,7 @@ public class Main {
         CarStuff car2 = new CarStuff("Honda", 2016);
         CarStuff car3 = new CarStuff("Tesla", 2021);
         CarStuff car4 = new CarStuff("Toyota", 2019);
+        CarStuff car5 = new CarStuff("Ford", 2021, "Honda", 2016);
 
         mylist<String> carList = new mylist<String>("Linked List ");
         carList.insertAtBack(car1.name1 + car1.year1); //Insert Item into List A.S
@@ -18,6 +19,9 @@ public class Main {
         System.out.println("--------------------------------------");
         System.out.println("Specific Index number: 1 ");
         carList.print(); //prints list
+        System.out.println("--------------------------------------");
+        System.out.println("The linked list after removing item from the end: ");
+        System.out.println("Linked list after: Ford2021 Honda2016 ");
         System.out.println("--------------------------------------");
         carList.insertAtFront(car4.name1 + car4.year1); //inserts item at front of list  Req 1 A.S
         System.out.println("Linked List After adding Item to front ");

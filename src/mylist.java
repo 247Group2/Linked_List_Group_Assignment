@@ -54,7 +54,7 @@ public class mylist<T> {
     }
 
     // 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
-    public T removeFromEnd() throws NoSuchElementException {
+    public T carStuff() throws NoSuchElementException {
         if (isEmpty()) {
             throw new NoSuchElementException(name);
         }
@@ -73,10 +73,10 @@ public class mylist<T> {
     // Validate that the index number is within bounds and throw an appropriate exception if not: Rabindra Singh
 
 
-    public T searchIndex(int index) throws carName {
+    public T carStuff(int index) throws NoSuchElementException {
         int size = this.size();
         if (index < 0 || index >= size)
-            throw new carName("OUT OF BOUNDS!");
+            throw new NoSuchElementException("OUT OF BOUNDS!");
         else {
             ListNode<T> firstNode = null;
             ListNode<T> find = firstNode;
