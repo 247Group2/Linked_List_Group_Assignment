@@ -16,6 +16,9 @@ public class Main {
         System.out.println("The original Linked List ");
         carList.print(); //prints list
         System.out.println("--------------------------------------");
+        System.out.println("Specific Index number: 1 ");
+        carList.print(); //prints list
+        System.out.println("--------------------------------------");
         carList.insertAtFront(car4.name1 + car4.year1); //inserts item at front of list  Req 1 A.S
         System.out.println("Linked List After adding Item to front ");
         carList.print();
@@ -24,16 +27,6 @@ public class Main {
         System.out.println("Linked List After removing item at index ");
         carList.print();
         System.out.println("--------------------------------------");
-
-
-
-//For requirement 3: Rabindra Singh
-        // print the list
-        System.out.println("The Original linked list: " + carList);
-        // Remove the last element
-        Object lastElement = carList.removeLast();
-        System.out.println("Element removed: "+ lastElement);
-        System.out.println("The New linked list: " + carList);
 
 
     }

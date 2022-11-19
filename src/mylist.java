@@ -53,10 +53,6 @@ public class mylist<T> {
         }
     }
 
-
-
-
-
     // 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
     public T removeFromEnd() throws NoSuchElementException {
         if (isEmpty()) {
@@ -75,6 +71,8 @@ public class mylist<T> {
 
     //3.Search for an item by index number (the number of its position in the list) and display the information for that library item.
     // Validate that the index number is within bounds and throw an appropriate exception if not: Rabindra Singh
+
+
     public T searchIndex(int index) throws carName {
         int size = this.size();
         if (index < 0 || index >= size)
@@ -85,44 +83,40 @@ public class mylist<T> {
             for (int i = 0; i < index; i++)
                 find = find.nextNode;
             return find.data;
+
+
         }
+
+
     }
 
-
-
-
     //determine whether list is empty
-    public boolean isEmpty ()
-    {
-        return first == null;	// return true if list is empty
+    public boolean isEmpty() {
+        return first == null;    // return true if list is empty
     }
 
     //output list contents
-    public void print ()
-    {
-        if (isEmpty ())
-        {
-            System.out.printf ("Empty %s\n", name);
+    public void print() {
+        if (isEmpty()) {
+            System.out.printf("Empty %s\n", name);
             return;
         }
-        System.out.printf ("%s is: ", name);
-        ListNode < T > current = first;
+        System.out.printf("%s is: ", name);
+        ListNode<T> current = first;
 
         //while not at end of list, output current node's data
-        while (current != null)
-        {
-            System.out.printf ("%s ", current.data.toString());
+        while (current != null) {
+            System.out.printf("%s ", current.data.toString());
             current = current.nextNode;
         }
-        System.out.println ();
+        System.out.println();
     }
 
-    public int size ()		// returns the number of items in the list
+    public int size()        // returns the number of items in the list
     {
         int count = 0;
-        ListNode < T > current = first;
-        while (current != null)
-        {
+        ListNode<T> current = first;
+        while (current != null) {
 
             count++;
 
@@ -161,42 +155,43 @@ public class mylist<T> {
 
 //node structure
 class Node {
-  int data;
-  Node next;
+    int data;
+    Node next;
 };
 
 class LinkedList {
-Node head;
+    Node head;
 
-LinkedList(){
-  head = null;
-}
-int countNodes() {
-  Node temp = new Node();
-  temp = this.head;
-  int i = 0;
-  while(temp != null) {
-    i++;
-    temp = temp.next;
-  }
-  return i;  
-}
-
-// 7: Ameed
-//display the content of the list
-void PrintList() {
-  Node temp = new Node();
-  temp = this.head;
-  if(temp != null) {
-    System.out.print("The list contains: ");
-    while(temp != null) {
-      System.out.print(temp.data + " ");
-      temp = temp.next;
+    LinkedList() {
+        head = null;
     }
-    System.out.println();
-  } else {
-    System.out.println("The list is empty.");
-  }
-}
+
+    int countNodes() {
+        Node temp = new Node();
+        temp = this.head;
+        int i = 0;
+        while (temp != null) {
+            i++;
+            temp = temp.next;
+        }
+        return i;
+    }
+
+    // 7: Ameed
+//display the content of the list
+    void PrintList() {
+        Node temp = new Node();
+        temp = this.head;
+        if (temp != null) {
+            System.out.print("The list contains: ");
+            while (temp != null) {
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+            System.out.println();
+        } else {
+            System.out.println("The list is empty.");
+        }
+    }
 }
 
