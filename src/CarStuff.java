@@ -1,15 +1,20 @@
 public class CarStuff {  //Andrew Stine
-     public String name1;
-    public int year1;
-    public CarStuff(String ford, int i, String honda, int i1){}
-    public CarStuff(String carname, int caryear){
-        this.name1 = carname;
-        this.year1 = caryear;
+
+    public int carYear;
+    public String carMake;
+    public String carModel;
+
+   // public CarStuff(String ford, int i, String honda, int i1){}
+    public CarStuff(int year, String make, String model){
+        this.carYear = year;
+        this.carMake = make;
+        this.carModel = model;
+
     }
 
     @Override
     public String toString() {  //Andrew Stine
-        return name1 + " " + year1;
+        return carYear + " " + carMake + " " + carModel;
     }
 }
 

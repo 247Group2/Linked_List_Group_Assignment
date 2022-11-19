@@ -14,7 +14,22 @@ public class mylist<T> {
     public mylist(String listName) {
         name = listName;
         first = last = null;
+    }
 
+    public void insert(T insertData) {
+        ListNode node = new ListNode(insertData);
+        node.data = insertData;
+        node.nextNode = null;
+
+        if (first == null) {
+            first = node;
+        } else {
+            ListNode n = first;
+            while (n.nextNode != null) {
+                n = n.nextNode;
+            }
+            n.nextNode = node;
+        }
 
     }
 
@@ -54,18 +69,40 @@ public class mylist<T> {
     }
 
     // 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
-    public T carStuff() throws NoSuchElementException {
+    public T removeFromLast() throws NoSuchElementException {
         if (isEmpty()) {
             throw new NoSuchElementException(name);
         }
         T removedItem = last.data;
 
-        if (last == first) {
-            last = first = null;
+        if (first == last) {
+            first = last = null;
         } else {
             last = last.nextNode;
         }
         return removedItem;
+    }
+
+    public T removeFromFront() throws NoSuchElementException {
+        if (isEmpty()) {// throw exception if List is empty
+            throw new NoSuchElementException(name);
+        }
+        T removedItem = first.data;// retrieve data being removed
+
+//update references firstNode and lastNode
+        if (first == last) {
+            first = last = null;
+        } else {
+            first = first.nextNode;
+        }
+        return removedItem;// return removed node data
+    }
+
+    public void add(T pink) {
+    }
+
+    public T removeLast() {
+        return null;
     }
 
 
@@ -150,70 +187,52 @@ public class mylist<T> {
     }
 
     //remove first node from List
-    public T removeFromFront() throws NoSuchElementException {
-        if (isEmpty()) {// throw exception if List is empty
-            throw new NoSuchElementException(name);
-        }
-        T removedItem = first.data;// retrieve data being removed
 
-//update references firstNode and lastNode
-        if (first == last) {
-            first = last = null;
-        } else {
-            first = first.nextNode;
-        }
-        return removedItem;// return removed node data
-    }
-
-    public void add(T pink) {
-    }
-
-    public T removeLast() {
-        return null;
-    }
-}
 
 // 6: Ameed
 //count nodes in the list
 
-//node structure
-class Node {
-    int data;
-    Node next;
-};
-
-class LinkedList {
-    Node head;
-
-    LinkedList() {
-        head = null;
+    //node structure
+    class Node {
+        int data;
+        Node next;
     }
 
-    int countNodes() {
-        Node temp = new Node();
-        temp = this.head;
-        int i = 0;
-        while (temp != null) {
-            i++;
-            temp = temp.next;
+    ;
+
+    class LinkedList {
+        Node head;
+
+        LinkedList() {
+            head = null;
         }
-        return i;
-    }
 
-    // 7: Ameed
-//display the content of the list
-    void PrintList() {
-        Node temp = new Node();
-        temp = this.head;
-        if (temp != null) {
-            System.out.print("The list contains: ");
+        int countNodes() {
+            Node temp = new Node();
+            temp = this.head;
+            int i = 0;
             while (temp != null) {
-                System.out.print(temp.data + " ");
+                i++;
                 temp = temp.next;
             }
-            System.out.println();
-        } else {
-            System.out.println("The list is empty.");
+            return i;
+        }
+
+        // 7: Ameed
+//display the content of the list
+        void PrintList() {
+            Node temp = new Node();
+            temp = this.head;
+            if (temp != null) {
+                System.out.print("The list contains: ");
+                while (temp != null) {
+                    System.out.print(temp.data + " ");
+                    temp = temp.next;
+                }
+                System.out.println();
+            } else {
+                System.out.println("The list is empty.");
+            }
         }
     }
 }
