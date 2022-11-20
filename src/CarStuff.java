@@ -1,4 +1,4 @@
-public class CarStuff {  //Andrew Stine
+public class CarStuff {  //A.S. and K.S.
 
     public int carYear;
     public String carMake;
