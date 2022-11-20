@@ -37,64 +37,60 @@ public class Main {
 
 
 //      STEP 0
-        System.out.println("\nSTEP 0: ORIGINAL LINKED LIST:");
+        System.out.println("\nORIGINAL LINKED LIST:");
         carList.print(); //prints list
 
 
 //      STEP 1
         System.out.println("\n----------------------------------------------------------");
         carList.insertAtFront(vehicle10); //inserts item at front of list  Req 1 A.S
-        System.out.println("STEP 1: VEHICLE ADDED TO THE FRONT:");
+        System.out.println("VEHICLE ADDED TO THE FRONT:");
         carList.print();
 
 
 //      STEP 2
         System.out.println("\n----------------------------------------------------------");
         carList.removeFromLast();
-        System.out.println("STEP 2: VEHICLE REMOVED FROM BACK:");
+        System.out.println("VEHICLE REMOVED FROM BACK:");
         carList.print();
-
-
-
 
 //      STEP 4
         System.out.println("\n--------------------------------------");
         carList.insertIndex(3, vehicle8) ;
-        System.out.println("STEP 4: VEHICLE ADDED BY INDEXING:");
+        System.out.println("VEHICLE ADDED BY INDEXING:");
         carList.print();
 
-
-//      STEP 5 NEEDS WORK
-        System.out.println("\n----------------------------------------------------------");
-        carList.removeItem(2); //Removes item at specific index, if index is out of bounds prints "Index out of bounds" A.S.
-        System.out.println("STEP 5: Linked List After removing item at index ");
+//      STEP 5
+        System.out.println("\n--------------------------------------");
+        carList.removeItem(1);
+        System.out.println("VEHICLE REMOVED BY INDEXING: ");
         carList.print();
-
-
-//      STEP 8
-        System.out.println("\n----------------------------------------------------------");
-        carList.clearList();
-        System.out.println("STEP 8: CLEAR LIST:");
-        carList.print();
-
-
-
-
 
 /*
 
 
 
-
+        //Req 1 inserts item at front of list  A.S
         System.out.println("----------------------------------------------------------");
         System.out.println("Specific Index number: 1 ");
         carList.print(); //prints list
 
 
+        System.out.println("----------------------------------------------------------");
+        System.out.println("The linked list after removing item from the end: ");
+       //carList.removeFromLast();
+       //carList.print();
+        System.out.println("Linked list after: Ford2021 Honda2016 ");
 
 
 
 
+
+        System.out.println("----------------------------------------------------------");
+        carList.removeItem(2);
+        System.out.println("Linked List After removing item at index ");
+        carList.print();
+        System.out.println("----------------------------------------------------------");
 
 
 

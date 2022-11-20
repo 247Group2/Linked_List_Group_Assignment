@@ -5,7 +5,8 @@ public class myList<T> {
     public ListNode<T> first;
     public ListNode<T> last;
 
-    public String name;        // string used in printing
+    public String name;
+    // string used in printing
 
     public myList() {
     }   // default constructor
