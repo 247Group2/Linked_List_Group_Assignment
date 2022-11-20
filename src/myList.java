@@ -123,7 +123,22 @@ public class myList<T> {
     }
 
 //  3. INDEX SEARCH - RABINDRA SINGH
-    public T searchForItem(int index) throws IndexOutOfBoundsException {
+
+    public  boolean findIndex(T searchKey){
+        if(first == null){
+            return false;
+        }
+        ListNode<T> current = first;
+        while(current != null){
+            if(current.data == searchKey){
+                return true;
+            }
+            current = current.nextNode;
+        }
+        return false;
+    }
+
+   /*public T searchForItem(int index) throws IndexOutOfBoundsException {
         int size = this.size();
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException("OUT OF BOUNDS!");
@@ -135,6 +150,10 @@ public class myList<T> {
             return find.data;
         }
     }
+
+
+    */
+
 
 //  4. SPECIFIC INDEX NUMBER - KEVIN SHIELDS
     public void insertIndex(int index, T insertItem) {
@@ -184,21 +203,21 @@ public class myList<T> {
     }
 
 //  7. DISPLAY NODE TOTAL - AMEED SHAIKH
-    public void PrintList() {
-        ListNode temp = new ListNode();
-        temp = this.first;
-        if (temp != null) {
-            System.out.print("The list contains: ");
-            while (temp != null) {
-                System.out.print(temp.data + " ");
-                temp = temp.nextNode;
-            }
-            System.out.println();
-        } else {
-            System.out.println("The list is empty.");
-      }
-    }
-
+//    public void PrintList() {
+//        ListNode temp = new ListNode();
+//        temp = this.first;
+//        if (temp != null) {
+//            System.out.print("The list contains: ");
+//            while (temp != null) {
+//                System.out.print(temp.data + " ");
+//                temp = temp.nextNode;
+//            }
+//            System.out.println();
+//        } else {
+//            System.out.println("The list is empty.");
+//      }
+//    }
+//
 
 
 
@@ -228,7 +247,7 @@ public class myList<T> {
 
 
 
-
+/*
 // 6 : Ameed
 //count nodes in the list
 
@@ -275,8 +294,11 @@ class LinkedList {
         }
     }
 
+STEP 3
+
 
  */
+
 
 
 
