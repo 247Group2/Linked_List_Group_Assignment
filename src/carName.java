@@ -19,6 +19,7 @@ public class carName {
         String vehicle3 = (car3.carYear + " " + car3.carMake + " " + car3.carModel);
         String vehicle4 = (car4.carYear + " " + car4.carMake + " " + car4.carModel);
         String vehicle5 = (car5.carYear + " " + car5.carMake + " " + car5.carModel);
+
         String vehicle6 = (car6.carYear + " " + car6.carMake + " " + car6.carModel);
         String vehicle7 = (car7.carYear + " " + car7.carMake + " " + car7.carModel);
         String vehicle8 = (car8.carYear + " " + car8.carMake + " " + car8.carModel);
@@ -26,7 +27,7 @@ public class carName {
         String vehicle10 = (car10.carYear + " " + car10.carMake + " " + car10.carModel);
         String vehicle11 = (car11.carYear + " " + car11.carMake + " " + car11.carModel);
 
-        myList<String> carList = new myList<String>("Car List");
+        myList<String> carList = new myList<>("Car List");
         carList.insert(vehicle1);
         carList.insert(vehicle2);
         carList.insert(vehicle3);
@@ -52,7 +53,7 @@ public class carName {
 
 //      STEP 2
         System.out.println("\n----------------------------------------------------------");
-        carList.removeFromLast();
+        carList.removeFromBack();
         System.out.println("STEP 2: VEHICLE REMOVED FROM BACK:");
         carList.print();
 
@@ -74,9 +75,9 @@ public class carName {
         System.out.println("STEP 4: VEHICLE ADDED BY INDEXING:");
         carList.print();
 
-//      STEP 5 NEEDS WORK****
+//      STEP 5
         System.out.println("\n--------------------------------------");
-        carList.removeItem(1);
+        carList.removeItem(4);
         System.out.println("STEP 5: VEHICLE REMOVED BY INDEXING:");
         carList.print();
 
@@ -88,7 +89,7 @@ public class carName {
 
 //      STEP 7 NEEDS WORK****
         System.out.println("\n----------------------------------------------------------");
-        carList.size();
+//        carList.PrintList();
         System.out.println("STEP 7: TOTAL NUMBER OF NODES:");
 
 //      STEP 8
