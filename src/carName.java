@@ -67,7 +67,13 @@ public class carName {
         System.out.println("\n----------------------------------------------------------");
 
         System.out.println("STEP 3: NODE BY INDEX ");
-        carList.print();
+        //carList.print();
+        int searchKey = 10;
+        if(carName.contains(searchKey)) {
+            System.out.println(searchKey + "Index number not found!");
+        }else {
+            System.out.println(searchKey + " : Index number found!");
+        }
 
 //      STEP 4
         System.out.println("\n--------------------------------------");
@@ -98,5 +104,9 @@ public class carName {
         System.out.println("STEP 8: CLEARED LINKED LIST");
         carList.print();
 
+    }
+
+    private static boolean contains(int searchKey) {
+        return false;
     }
 }
