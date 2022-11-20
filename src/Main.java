@@ -70,7 +70,7 @@ public class Main {
 //      STEP 8
         System.out.println("\n----------------------------------------------------------");
         carList.clearList();
-        System.out.println("STEP 8: CLEAR LINKED LIST");
+        System.out.println("STEP 8: CLEARED LINKED LIST");
         carList.print();
 
 /*
