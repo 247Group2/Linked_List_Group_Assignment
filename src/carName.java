@@ -67,13 +67,14 @@ public class carName {
         System.out.println("\n----------------------------------------------------------");
 
         System.out.println("STEP 3: NODE BY INDEX ");
-        //carList.print();
-        int searchKey = 10;
+
+        int searchKey = 2;
         if(carName.contains(searchKey)) {
-            System.out.println(searchKey + "Index number not found!");
+            System.out.println("Index number not found!" + searchKey);
         }else {
-            System.out.println(searchKey + " : Index number found!");
+            System.out.println( "Index number found: " + searchKey);
         }
+        carList.print();
 
 //      STEP 4
         System.out.println("\n--------------------------------------");
