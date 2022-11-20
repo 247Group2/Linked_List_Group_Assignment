@@ -5,16 +5,33 @@ public class myList<T> {
     public ListNode<T> first;
     public ListNode<T> last;
 
-    public String name;
-    // string used in printing
-
-    public myList() {
-    }   // default constructor
-
+    public String name; // string used in printing
+    public myList() { // default constructor
+    }
     //constructor creates an empty List with a name
     public myList(String listName) {
         name = listName;
         first = last = null;
+    }
+
+    // determine whether list is empty
+    public boolean isEmpty() {
+        return first == null;    // return true if list is empty
+    }
+
+    // returns the number of items in the list
+    public int size(){
+
+        int count = 0;
+        ListNode<T> current = first;
+        while (current != null) {
+
+            count++;
+
+            current = current.nextNode;
+
+        }
+        return count;
     }
 
 //  INPUTTING THE DATA
@@ -32,10 +49,9 @@ public class myList<T> {
             }
             n.nextNode = node;
         }
-
     }
 
-//  1.Insert an Item/Node at the front - ANDREW STINE
+//  1.INSERT AT FRONT - ANDREW STINE
     public void insertAtFront(T insertItem) {
         if (isEmpty()) {
             first = last = new ListNode<T>(insertItem);
@@ -44,7 +60,7 @@ public class myList<T> {
         }
     }
 
-    //insert at back
+//  INSERT AT BACK - ORIGINAL CODE
     public void insertAtBack(T insertItem) {
         if (isEmpty()) {
             first = last = new ListNode<T>(insertItem);
@@ -57,7 +73,27 @@ public class myList<T> {
         }
     }
 
-//  2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: RABINDRA SINGH
+
+    //output list contents
+    public void print() {
+        if (isEmpty()) {
+            System.out.printf("Empty %s\n", name);
+            return;
+        }
+        System.out.printf("%s is: ", name);
+        ListNode<T> current = first;
+
+        //while not at end of list, output current node's data
+        while (current != null) {
+            System.out.printf("%s ", current.data.toString());
+            current = current.nextNode;
+        }
+        System.out.println();
+    }
+
+
+
+//  2. REMOVE FROM BACK - RABINDRA SINGH
     public ListNode<T> removeFromLast() throws NoSuchElementException {
         if (isEmpty()) {
             throw new NoSuchElementException(name);
@@ -74,14 +110,14 @@ public class myList<T> {
         return current;
     }
 
-
+//  REMOVE FROM FRONT - ORIGINAL
     public T removeFromFront() throws NoSuchElementException {
         if (isEmpty()) {// throw exception if List is empty
             throw new NoSuchElementException(name);
         }
         T removedItem = first.data;// retrieve data being removed
 
-//update references firstNode and lastNode
+        //update references firstNode and lastNode
         if (first == last) {
             first = last = null;
         } else {
@@ -90,18 +126,7 @@ public class myList<T> {
         return removedItem;// return removed node data
     }
 
-//    public void add(T pink) {
-//    }
-
-//    public T removeLast() {
-//        return null;
-//    }
-
-
-    //3.Search for an item by index number (the number of its position in the list) and display the information for that library item.
-    // Validate that the index number is within bounds and throw an appropriate exception if not: Rabindra Singh
-
-
+//  3. INDEX SEARCH - ANDREW STINE
     public T carStuff(int index) throws NoSuchElementException {
         int size = this.size();
         if (index < 0 || index >= size)
@@ -111,16 +136,10 @@ public class myList<T> {
             for (int i = 0; i < index; i++)
                 find = find.nextNode;
             return find.data;
-
-
         }
-
-
     }
 
-    //    4.Insert a node at a specific index number. The code must validate that
-//    the index number is within bounds and throw an appropriate exception if not: Kevin Shields
-
+//  4. SPECIFIC INDEX NUMBER - KEVIN SHIELDS
     public void insertIndex(int index, T insertItem) {
         ListNode<T> node = new ListNode<T>(insertItem);
 
@@ -141,6 +160,14 @@ public class myList<T> {
         }
     }
 
+
+
+
+//  8. CLEAR LIST
+    public void clearList() {
+        first = null;
+    }
+
     //5 Remove an item at a specific index number.
     // The code must validate that the index number is within bounds and throw an appropriate exception if not: A.S
     public void removeItem(int index) {
@@ -155,78 +182,71 @@ public class myList<T> {
         }
     }
 
-    //determine whether list is empty
-    public boolean isEmpty() {
-        return first == null;    // return true if list is empty
-    }
 
-    //output list contents
-    public void print() {
-        if (isEmpty()) {
-            System.out.printf("Empty %s\n", name);
-            return;
-        }
-        System.out.printf("%s is: ", name);
+
+    public String toStringPrint() {
+        String result = first.toString();
         ListNode<T> current = first;
-
-        //while not at end of list, output current node's data
-        while (current != null) {
-            System.out.printf("%s ", current.data.toString());
-            current = current.nextNode;
+        while (current.getNext() != null) {
+            result += current.getData() + "\n";
+            if (current.getNext() != null) {
+                result += ", ";
+            }
+            current = current.getNext();
         }
-        System.out.println();
+        return "List: " + result;
+
     }
+}
 
-    public int size()        // returns the number of items in the list
-    {
-        int count = 0;
-        ListNode<T> current = first;
-        while (current != null) {
+//    public void countNodes() {
+//
+//        ListNodeNode<T> temp = new ListNode<T>();
+//            temp = this.first;
+//            int i = 0;
+//            while (temp != null) {
+//                i++;
+//                temp = temp.nextNode ;
+//            }
+//            return i;
+//        }
 
-            count++;
-
-            current = current.nextNode;
-
-        }
-        return count;
-    }
-
-    //remove first node from List
+/*
 
 
 // 6 : Ameed
 //count nodes in the list
 
-    //node structure
-    class Node {
-        int data;
-        Node next;
-    }
+//node structure
+class Node {
+    int data;
+    Node next;
+}
     public void clearList(){
         first = null;
 
 
     }
 
-    class LinkedList {
-        Node head;
+class LinkedList {
+    Node head;
 
-        LinkedList() {
-            head = null;
+    LinkedList() {
+        head = null;
+    }
+
+    int countNodes() {
+        Node temp = new Node();
+        temp = this.head;
+        int i = 0;
+        while (temp != null) {
+            i++;
+            temp = temp.next;
         }
+        return i;
+    }
 
-        int countNodes() {
-            Node temp = new Node();
-            temp = this.head;
-            int i = 0;
-            while (temp != null) {
-                i++;
-                temp = temp.next;
-            }
-            return i;
-        }
-
-        // 7: Ameed
+    // 7: Ameed
 //display the content of the list
     public void PrintList() {
         Node temp = new Node();
@@ -240,8 +260,16 @@ public class myList<T> {
             System.out.println();
         } else {
             System.out.println("The list is empty.");
-            }
         }
     }
 }
+}
+//    public void add(T pink) {
+//    }
 
+//    public T removeLast() {
+//        return null;
+//    }
+
+
+ */
