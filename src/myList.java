@@ -1,4 +1,4 @@
-import java.util.NoSuchElementException;
+import java.util.*;
 
 public class myList<T> {
 
@@ -122,15 +122,16 @@ public class myList<T> {
         return removedItem;// return removed node data
     }
 
-//  3. INDEX SEARCH - ANDREW STINE
-    public T carStuff(int index) throws NoSuchElementException {
+//  3. INDEX SEARCH - RABINDRA SINGH
+    public T searchForItem(int index) throws IndexOutOfBoundsException {
         int size = this.size();
         if (index < 0 || index >= size)
-            throw new NoSuchElementException("OUT OF BOUNDS!");
+            throw new IndexOutOfBoundsException("OUT OF BOUNDS!");
         else {
-            ListNode<T> find = null;
+            ListNode<T> find = first;
             for (int i = 0; i < index; i++)
                 find = find.nextNode;
+
             return find.data;
         }
     }
@@ -165,7 +166,7 @@ public class myList<T> {
             }
             temp.nextNode = temp.nextNode.nextNode;
         } catch (Exception e) {
-            System.out.println("Index out of bounds ");
+            System.out.println("Index Out Of Bounds!! ");
         }
     }
 

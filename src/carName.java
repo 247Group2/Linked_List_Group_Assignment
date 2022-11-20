@@ -65,7 +65,7 @@ public class carName {
 
 //      STEP 3 NEEDS WORK****
         System.out.println("\n----------------------------------------------------------");
-//        carList.carStuff(3);
+      carList.searchForItem(3);
         System.out.println("STEP 3: NODE BY INDEX ");
         carList.print();
 
