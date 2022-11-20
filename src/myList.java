@@ -183,21 +183,21 @@ public class myList<T> {
         }
     }
 
-//  7. DISPLAY NODE TOTAL
-//    public void PrintList() {
-//        Node temp = new Node();
-//        temp = this.head;
-//        if (temp != null) {
-//            System.out.print("The list contains: ");
-//            while (temp != null) {
-//                System.out.print(temp.data + " ");
-//                temp = temp.next;
-//            }
-//            System.out.println();
-//        } else {
-//            System.out.println("The list is empty.");
-//        }
-//    }
+//  7. DISPLAY NODE TOTAL - AMEED SHAIKH
+    public void PrintList() {
+        ListNode temp = new ListNode();
+        temp = this.first;
+        if (temp != null) {
+            System.out.print("The list contains: ");
+            while (temp != null) {
+                System.out.print(temp.data + " ");
+                temp = temp.nextNode;
+            }
+            System.out.println();
+        } else {
+            System.out.println("The list is empty.");
+      }
+    }
 
 
 
@@ -226,7 +226,7 @@ public class myList<T> {
 //            return i;
 //        }
 
-/*
+
 
 
 // 6 : Ameed
@@ -237,11 +237,6 @@ class Node {
     int data;
     Node next;
 }
-    public void clearList(){
-        first = null;
-
-
-    }
 
 class LinkedList {
     Node head;
@@ -260,31 +255,30 @@ class LinkedList {
         }
         return i;
     }
-
-    // 7: Ameed
+}
+/*
+        // 7: Ameed
 //display the content of the list
-    public void PrintList() {
-        Node temp = new Node();
-        temp = this.head;
-        if (temp != null) {
-            System.out.print("The list contains: ");
-            while (temp != null) {
-                System.out.print(temp.data + " ");
-                temp = temp.next;
+        public void PrintList() {
+            Node temp = new Node();
+            temp = this.head;
+            if (temp != null) {
+                System.out.print("The list contains: ");
+                while (temp != null) {
+                    System.out.print(temp.data + " ");
+                    temp = temp.next;
+                }
+                System.out.println();
+            } else {
+                System.out.println("The list is empty.");
             }
-            System.out.println();
-        } else {
-            System.out.println("The list is empty.");
         }
     }
-}
-}
-//    public void add(T pink) {
-//    }
-
-//    public T removeLast() {
-//        return null;
-//    }
 
 
  */
+
+
+
+
+
