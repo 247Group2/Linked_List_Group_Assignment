@@ -66,6 +66,13 @@ public class Main {
         System.out.println("VEHICLE REMOVED BY INDEXING: ");
         carList.print();
 
+
+//      STEP 8
+        System.out.println("\n----------------------------------------------------------");
+        carList.clearList();
+        System.out.println("STEP 8: CLEAR LINKED LIST");
+        carList.print();
+
 /*
 
 
