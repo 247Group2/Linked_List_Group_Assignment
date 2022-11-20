@@ -17,6 +17,7 @@ public class myList<T> {
         first = last = null;
     }
 
+//  INPUTTING THE DATA
     public void insert(T insertData) {
         ListNode node = new ListNode(insertData);
         node.data = insertData;
@@ -34,7 +35,7 @@ public class myList<T> {
 
     }
 
-    //1.Insert an Item/Node at the front - A.S. NEED TO THROW EXCEPTION
+//  1.Insert an Item/Node at the front - ANDREW STINE
     public void insertAtFront(T insertItem) {
         if (isEmpty()) {
             first = last = new ListNode<T>(insertItem);
@@ -56,8 +57,7 @@ public class myList<T> {
         }
     }
 
-    // 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
-
+//  2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: RABINDRA SINGH
     public ListNode<T> removeFromLast() throws NoSuchElementException {
         if (isEmpty()) {
             throw new NoSuchElementException(name);
@@ -90,12 +90,12 @@ public class myList<T> {
         return removedItem;// return removed node data
     }
 
-    public void add(T pink) {
-    }
+//    public void add(T pink) {
+//    }
 
-    public T removeLast() {
-        return null;
-    }
+//    public T removeLast() {
+//        return null;
+//    }
 
 
     //3.Search for an item by index number (the number of its position in the list) and display the information for that library item.
@@ -107,8 +107,7 @@ public class myList<T> {
         if (index < 0 || index >= size)
             throw new NoSuchElementException("OUT OF BOUNDS!");
         else {
-            ListNode<T> firstNode = null;
-            ListNode<T> find = firstNode;
+            ListNode<T> find = null;
             for (int i = 0; i < index; i++)
                 find = find.nextNode;
             return find.data;
@@ -229,18 +228,18 @@ public class myList<T> {
 
         // 7: Ameed
 //display the content of the list
-        void PrintList() {
-            Node temp = new Node();
-            temp = this.head;
-            if (temp != null) {
-                System.out.print("The list contains: ");
-                while (temp != null) {
-                    System.out.print(temp.data + " ");
-                    temp = temp.next;
-                }
-                System.out.println();
-            } else {
-                System.out.println("The list is empty.");
+    public void PrintList() {
+        Node temp = new Node();
+        temp = this.head;
+        if (temp != null) {
+            System.out.print("The list contains: ");
+            while (temp != null) {
+                System.out.print(temp.data + " ");
+                temp = temp.next;
+            }
+            System.out.println();
+        } else {
+            System.out.println("The list is empty.");
             }
         }
     }

@@ -54,16 +54,34 @@ public class Main {
         System.out.println("STEP 2: VEHICLE REMOVED FROM BACK:");
         carList.print();
 
+//      STEP 3 NEEDS WORK****
+        System.out.println("\n----------------------------------------------------------");
+//        carList.carStuff(3);
+        System.out.println("STEP 3: NODE BY INDEX ");
+        carList.print();
+
 //      STEP 4
         System.out.println("\n--------------------------------------");
         carList.insertIndex(3, vehicle8) ;
         System.out.println("STEP 4: VEHICLE ADDED BY INDEXING:");
         carList.print();
 
-//      STEP 5 NEEDS WORK
+//      STEP 5 NEEDS WORK****
         System.out.println("\n--------------------------------------");
         carList.removeItem(1);
-        System.out.println("STEP 5: VEHICLE REMOVED BY INDEXING: ");
+        System.out.println("STEP 5: VEHICLE REMOVED BY INDEXING:");
+        carList.print();
+
+//      STEP 6 NEEDS WORK****
+        System.out.println("\n----------------------------------------------------------");
+
+        System.out.println("STEP 6: Linked List After removing item at index ");
+        carList.print();
+
+//      STEP 7 NEEDS WORK****
+        System.out.println("\n----------------------------------------------------------");
+
+        System.out.println("STEP 7: TOTAL NUMBER OF NODES:");
         carList.print();
 
 
