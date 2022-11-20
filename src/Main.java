@@ -48,11 +48,19 @@ public class Main {
         carList.print();
 
 
-
 //      STEP 2
         System.out.println("\n----------------------------------------------------------");
         carList.removeFromLast();
         System.out.println("VEHICLE REMOVED FROM BACK:");
+        carList.print();
+
+
+
+
+//      STEP 4
+        System.out.println("\n--------------------------------------");
+        carList.insertIndex(3, vehicle8) ;
+        System.out.println("VEHICLE ADDED BY INDEXING:");
         carList.print();
 
 
@@ -83,12 +91,7 @@ public class Main {
         carList.print();
         System.out.println("----------------------------------------------------------");
 
-//        4.Insert a node at a specific index number. The code must validate that
-//    the index number is within bounds and throw an appropriate exception if not: Kevin Shields
-        System.out.println("--------------------------------------");
-        carList.insertIndex(3, vehicle6) ;
-        System.out.println("Linked List AFTER ADDING item at index ");
-        carList.print();
+
 
 
 */
