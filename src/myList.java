@@ -202,8 +202,11 @@ public class myList<T> {
         int data;
         Node next;
     }
+    public void clearList(){
+        first = null;
 
-    ;
+
+    }
 
     class LinkedList {
         Node head;
