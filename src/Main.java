@@ -75,32 +75,11 @@ public class Main {
 
 /*
 
-
-
-        //Req 1 inserts item at front of list  A.S
-        System.out.println("----------------------------------------------------------");
-        System.out.println("Specific Index number: 1 ");
-        carList.print(); //prints list
-
-
-        System.out.println("----------------------------------------------------------");
-        System.out.println("The linked list after removing item from the end: ");
-       //carList.removeFromLast();
-       //carList.print();
-        System.out.println("Linked list after: Ford2021 Honda2016 ");
-
-
-
-
-
         System.out.println("----------------------------------------------------------");
         carList.removeItem(2);
         System.out.println("Linked List After removing item at index ");
         carList.print();
         System.out.println("----------------------------------------------------------");
-
-
-
 
 */
 
