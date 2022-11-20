@@ -1,17 +1,17 @@
 import java.util.NoSuchElementException;
 
-public class mylist<T> {
+public class myList<T> {
 
     public ListNode<T> first;
     public ListNode<T> last;
 
     public String name;        // string used in printing
 
-    public mylist() {
+    public myList() {
     }   // default constructor
 
     //constructor creates an empty List with a name
-    public mylist(String listName) {
+    public myList(String listName) {
         name = listName;
         first = last = null;
     }
@@ -33,6 +33,15 @@ public class mylist<T> {
 
     }
 
+    //1.Insert an Item/Node at the front - A.S. NEED TO THROW EXCEPTION
+    public void insertAtFront(T insertItem) {
+        if (isEmpty()) {
+            first = last = new ListNode<T>(insertItem);
+        } else {
+            first = new ListNode<T>(insertItem, first);
+        }
+    }
+
     //insert at back
     public void insertAtBack(T insertItem) {
         if (isEmpty()) {
@@ -46,42 +55,24 @@ public class mylist<T> {
         }
     }
 
-    //1.Insert an Item/Node at the front - A.S.
-    public void insertAtFront(T insertItem) {
-        if (isEmpty()) {
-            first = last = new ListNode<T>(insertItem);
-        } else {
-            first = new ListNode<T>(insertItem, first);
-        }
-    }
-
-    //5 - A.S
-    public void removeItem(int index) {
-        try { // Tries the code below
-            ListNode temp = first;
-            for (int i = 0; i < index - 1; i++) {
-                temp = temp.nextNode;
-            }
-            temp.nextNode = temp.nextNode.nextNode;
-        } catch (Exception e) {
-            System.out.println("Index out of bounds ");
-        }
-    }
-
     // 2. Remove an item from end. Throw an exception if the program attempts to remove an item from an empty list: Rabindra Singh
-    public T removeFromLast() throws NoSuchElementException {
+
+    public ListNode<T> removeFromLast() throws NoSuchElementException {
         if (isEmpty()) {
             throw new NoSuchElementException(name);
         }
-        T removedItem = last.data;
 
-        if (first == last) {
-            first = last = null;
-        } else {
-            last = last.nextNode;
+        ListNode<T> current = first;
+        ListNode<T> previous = null;
+
+        while (current.nextNode != null) {
+            previous = current;
+            current = current.nextNode;
         }
-        return removedItem;
+        previous.nextNode = null;
+        return current;
     }
+
 
     public T removeFromFront() throws NoSuchElementException {
         if (isEmpty()) {// throw exception if List is empty
@@ -150,6 +141,20 @@ public class mylist<T> {
         }
     }
 
+    //5 Remove an item at a specific index number.
+    // The code must validate that the index number is within bounds and throw an appropriate exception if not: A.S
+    public void removeItem(int index) {
+        try { // Tries the code below
+            ListNode temp = first;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.nextNode;
+            }
+            temp.nextNode = temp.nextNode.nextNode;
+        } catch (Exception e) {
+            System.out.println("Index out of bounds ");
+        }
+    }
+
     //determine whether list is empty
     public boolean isEmpty() {
         return first == null;    // return true if list is empty
@@ -189,7 +194,7 @@ public class mylist<T> {
     //remove first node from List
 
 
-// 6: Ameed
+// 6 : Ameed
 //count nodes in the list
 
     //node structure

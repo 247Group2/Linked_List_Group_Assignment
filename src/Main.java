@@ -27,7 +27,7 @@ public class Main {
         String vehicle10 = (car10.carYear + " " + car10.carMake + " " + car10.carModel);
         String vehicle11 = (car11.carYear + " " + car11.carMake + " " + car11.carModel);
         
-        mylist<String> carList = new mylist<String>("Car List");
+        myList<String> carList = new myList<String>("Car List");
         carList.insert(vehicle1);
         carList.insert(vehicle2);
         carList.insert(vehicle3);
@@ -36,9 +36,30 @@ public class Main {
 
 
 
-        System.out.println("----------------------------------------------------------");
-        System.out.println("The original Linked List:");
+//      STEP 0
+        System.out.println("\nORIGINAL LINKED LIST:");
         carList.print(); //prints list
+
+
+//      STEP 1
+        System.out.println("\n----------------------------------------------------------");
+        carList.insertAtFront(vehicle10); //inserts item at front of list  Req 1 A.S
+        System.out.println("VEHICLE ADDED TO THE FRONT:");
+        carList.print();
+
+
+
+//      STEP 2
+        System.out.println("\n----------------------------------------------------------");
+        carList.removeFromLast();
+        System.out.println("VEHICLE REMOVED FROM BACK:");
+        carList.print();
+
+
+
+/*
+
+
 
 
         System.out.println("----------------------------------------------------------");
@@ -53,10 +74,7 @@ public class Main {
         System.out.println("Linked list after: Ford2021 Honda2016 ");
 
 
-        System.out.println("----------------------------------------------------------");
-        carList.insertAtFront(vehicle10); //inserts item at front of list  Req 1 A.S
-        System.out.println("Linked List After adding Item to front ");
-        carList.print();
+
 
 
         System.out.println("----------------------------------------------------------");
@@ -73,7 +91,7 @@ public class Main {
         carList.print();
 
 
-
+*/
 
 
 
