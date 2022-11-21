@@ -65,15 +65,8 @@ public class carName {
 
 //      STEP 3 NEEDS WORK****
         System.out.println("\n----------------------------------------------------------");
-
+        carList.findIndex(vehicle3);
         System.out.println("STEP 3: NODE BY INDEX ");
-
-        int searchKey = 2;
-        if(carName.contains(searchKey)) {
-            System.out.println("Index number not found!" + searchKey);
-        }else {
-            System.out.println( "Index number found: " + searchKey);
-        }
         carList.print();
 
 //      STEP 4
@@ -105,9 +98,5 @@ public class carName {
         System.out.println("STEP 8: CLEARED LINKED LIST");
         carList.print();
 
-    }
-//Tied to Step 3: Dont delete*
-    private static boolean contains(int searchKey) {
-        return false;
     }
 }
