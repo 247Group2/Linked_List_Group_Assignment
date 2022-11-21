@@ -52,7 +52,7 @@ public class carName {
         System.out.println("ORIGINAL 1: VEHICLE ADDED TO THE BACK:");
         carList.print();
 
-//      STEP 2
+//      STEP 2- Rabindra Singh
         System.out.println("\n----------------------------------------------------------");
         carList.removeFromBack();
         System.out.println("STEP 2: VEHICLE REMOVED FROM BACK:");
@@ -64,7 +64,7 @@ public class carName {
         System.out.println("ORIGINAL 2: VEHICLE REMOVED FROM FRONT:");
         carList.print();
 
-//      STEP 3 NEEDS WORK
+//      STEP 3- Rabindra Singh
         System.out.println("\n----------------------------------------------------------");
         System.out.println("STEP 3: NODE BY INDEX ");
         int searchKey = 2;
