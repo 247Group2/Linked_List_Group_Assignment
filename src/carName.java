@@ -1,11 +1,11 @@
 public class carName {
 
-    public void carLL(){
+    public void carLL() {
 
-        CarStuff car1 = new CarStuff(2021,"Ford","Mustang GT");
+        CarStuff car1 = new CarStuff(2021, "Ford", "Mustang GT");
         CarStuff car2 = new CarStuff(2016, "Honda", "Accord");
-        CarStuff car3 = new CarStuff(2021,"Tesla", "Model S Plaid");
-        CarStuff car4 = new CarStuff(2020,"Toyota", "Corolla SE");
+        CarStuff car3 = new CarStuff(2021, "Tesla", "Model S Plaid");
+        CarStuff car4 = new CarStuff(2020, "Toyota", "Corolla SE");
         CarStuff car5 = new CarStuff(2020, "Lamborghini", "Aventador SVJ");
         CarStuff car6 = new CarStuff(2023, "Ferrari", "SF90");
         CarStuff car7 = new CarStuff(2022, "McLaren", "720S");
@@ -33,6 +33,7 @@ public class carName {
         carList.insert(vehicle3);
         carList.insert(vehicle4);
         carList.insert(vehicle5);
+        carList.insert(vehicle11);
 
 
 //      STEP 0
@@ -63,15 +64,20 @@ public class carName {
         System.out.println("ORIGINAL 2: VEHICLE REMOVED FROM FRONT:");
         carList.print();
 
-//      STEP 3 NEEDS WORK****
+//      STEP 3 NEEDS WORK
         System.out.println("\n----------------------------------------------------------");
-        carList.findIndex(vehicle3);
         System.out.println("STEP 3: NODE BY INDEX ");
+        int searchKey = 2;
+        if (carName.contains(searchKey)) {
+            System.out.println("INDEX NUMBER NOT FOUND!: " + searchKey);
+        } else {
+            System.out.println("INDEX NUMBER FOUND!: " + searchKey);
+        }
         carList.print();
 
 //      STEP 4
         System.out.println("\n--------------------------------------");
-        carList.insertIndex(3, vehicle8) ;
+        carList.insertIndex(3, vehicle8);
         System.out.println("STEP 4: VEHICLE ADDED BY INDEXING:");
         carList.print();
 
@@ -87,7 +93,7 @@ public class carName {
         System.out.println("STEP 6: Linked List After removing item at index ");
         carList.print();
 
-//      STEP 7 SHOULD WORK NOW****
+//      STEP 7
         System.out.println("\n----------------------------------------------------------");
         System.out.println("STEP 7: TOTAL NUMBER OF NODES:");
         System.out.println("The number of nodes: " + carList.numberOfNodes());
@@ -98,5 +104,9 @@ public class carName {
         System.out.println("STEP 8: CLEARED LINKED LIST");
         carList.print();
 
+    }
+
+    private static boolean contains(int searchKey) {
+        return false;
     }
 }
