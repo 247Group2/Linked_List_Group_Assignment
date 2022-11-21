@@ -1,3 +1,4 @@
+//Ameed Shaikh, Andrew Stine, Kevin Shields, Rabindra Singh
 import java.util.*;
 
 public class myList<T> {

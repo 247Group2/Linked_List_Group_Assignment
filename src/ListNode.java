@@ -1,3 +1,4 @@
+//Ameed Shaikh, Andrew Stine, Kevin Shields, Rabindra Singh
 public class ListNode<T> {
     T data;// data for this node
     ListNode<T> nextNode;

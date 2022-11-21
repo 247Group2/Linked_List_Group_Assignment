@@ -1,4 +1,7 @@
+//Ameed Shaikh, Andrew Stine, Kevin Shields, Rabindra Singh
 public class carName {
+
+    String line1 = new String(new char[200]).replace('\0', '-');
 
     public void carLL() {
 
@@ -40,32 +43,32 @@ public class carName {
         System.out.println("\nSTEP 0: ORIGINAL LINKED LIST:");
         carList.print(); //prints list
 
-//      STEP 1
-        System.out.println("\n----------------------------------------------------------");
+//      STEP 1 - ANDREW STINE
+        System.out.println("\n" + line1);
         carList.insertAtFront(vehicle10); //inserts item at front of list  Req 1 A.S
         System.out.println("STEP 1: VEHICLE ADDED TO THE FRONT:");
         carList.print();
 
 //      ORIGINAL 1
-        System.out.println("\n----------------------------------------------------------");
-        carList.insertAtBack(vehicle9); //inserts item at front of list  Req 1 A.S
+        System.out.println("\n" + line1);
+        carList.insertAtBack(vehicle9);
         System.out.println("ORIGINAL 1: VEHICLE ADDED TO THE BACK:");
         carList.print();
 
-//      STEP 2- Rabindra Singh
-        System.out.println("\n----------------------------------------------------------");
+//      STEP 2 - RABINDRA SINGH
+        System.out.println("\n" + line1);
         carList.removeFromBack();
         System.out.println("STEP 2: VEHICLE REMOVED FROM BACK:");
         carList.print();
 
 //      ORIGINAL 2
-        System.out.println("\n----------------------------------------------------------");
+        System.out.println("\n" + line1);
         carList.removeFromFront();
         System.out.println("ORIGINAL 2: VEHICLE REMOVED FROM FRONT:");
         carList.print();
 
-//      STEP 3- Rabindra Singh
-        System.out.println("\n----------------------------------------------------------");
+//      STEP 3 - RABINDRA SINGH
+        System.out.println("\n" + line1);
         System.out.println("STEP 3: NODE BY INDEX ");
         int searchKey = 2;
         if (carName.contains(searchKey)) {
@@ -75,31 +78,31 @@ public class carName {
         }
         carList.print();
 
-//      STEP 4
-        System.out.println("\n--------------------------------------");
+//      STEP 4 - KEVIN SHIELDS
+        System.out.println("\n" + line1);
         carList.insertIndex(3, vehicle8);
         System.out.println("STEP 4: VEHICLE ADDED BY INDEXING:");
         carList.print();
 
-//      STEP 5
-        System.out.println("\n--------------------------------------");
+//      STEP 5 - ANDREW STINE
+        System.out.println("\n" + line1);
         carList.removeItem(4);
         System.out.println("STEP 5: VEHICLE REMOVED BY INDEXING:");
         carList.print();
 
-//      STEP 6 NEEDS WORK****
-        System.out.println("\n----------------------------------------------------------");
+//      STEP 6
+        System.out.println("\n" + line1);
         carList.toStringPrint();
         System.out.println("STEP 6: Linked List After removing item at index ");
         carList.print();
 
-//      STEP 7
-        System.out.println("\n----------------------------------------------------------");
+//      STEP 7 - AMEED SHAIKH
+        System.out.println("\n" + line1);
         System.out.println("STEP 7: TOTAL NUMBER OF NODES:");
         System.out.println("The number of nodes: " + carList.numberOfNodes());
 
-//      STEP 8
-        System.out.println("\n----------------------------------------------------------");
+//      STEP 8 - KEVIN SHIELDS
+        System.out.println("\n" + line1);
         carList.clearList();
         System.out.println("STEP 8: CLEARED LINKED LIST");
         carList.print();
