@@ -31,7 +31,7 @@ public class myList<T> {
             current = current.nextNode;
 
         }
-        return count;
+        return (count);
     }
 
 //  INPUTTING THE DATA
@@ -179,11 +179,11 @@ public class myList<T> {
 //  5. REMOVE ITEM FROM INDEX NUMBER - ANDREW STINE
     public void removeItem(int index) {
         try { // Tries the code below
-            ListNode<T> temp = first;
+            ListNode<T> rem = first;
             for (int i = 0; i < index - 1; i++) {
-                temp = temp.nextNode;
+                rem = rem.nextNode;
             }
-            temp.nextNode = temp.nextNode.nextNode;
+            rem.nextNode = rem.nextNode.nextNode;
         } catch (Exception e) {
             System.out.println("Index Out Of Bounds!! ");
         }
@@ -202,23 +202,36 @@ public class myList<T> {
         }
     }
 
-//  7. DISPLAY NODE TOTAL - AMEED SHAIKH
-//    public void PrintList() {
-//        ListNode temp = new ListNode();
-//        temp = this.first;
-//        if (temp != null) {
-//            System.out.print("The list contains: ");
-//            while (temp != null) {
-//                System.out.print(temp.data + " ");
-//                temp = temp.nextNode;
-//            }
-//            System.out.println();
-//        } else {
-//            System.out.println("The list is empty.");
-//      }
-//    }
-//
 
+
+//  7. DISPLAY NODE TOTAL - AMEED SHAIKH
+ /*  public void PrintList() {
+       ListNode temp = new ListNode();
+       temp = this.first;
+        if (temp != null) {
+           System.out.print("The list contains: ");
+           while (temp != null) {
+                System.out.print(temp.data + " ");
+                temp = temp.nextNode;
+           }
+            System.out.println();
+        } else {
+           System.out.println("The list is empty.");
+      }
+   }
+*/
+//Req 7
+    public int numberOfNodes(){
+        ListNode temp = first;
+        int count = 0;
+        while (temp != null) {
+            count++;
+            temp = temp.nextNode;
+
+           // System.out.println(count);
+        }
+        return count;
+    }
 
 
 //  8. CLEAR LIST

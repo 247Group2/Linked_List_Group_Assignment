@@ -96,8 +96,8 @@ public class carName {
 
 //      STEP 7 NEEDS WORK****
         System.out.println("\n----------------------------------------------------------");
-//        carList.PrintList();
         System.out.println("STEP 7: TOTAL NUMBER OF NODES:");
+        System.out.println("The number of nodes: " + carList.numberOfNodes());
 
 //      STEP 8
         System.out.println("\n----------------------------------------------------------");
