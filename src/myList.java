@@ -123,7 +123,6 @@ public class myList<T> {
     }
 
 //  3. INDEX SEARCH - RABINDRA SINGH
-
     public  boolean findIndex(T searchKey){
         if(first == null){
             return false;
@@ -137,22 +136,6 @@ public class myList<T> {
         }
         return false;
     }
-
-   /*public T searchForItem(int index) throws IndexOutOfBoundsException {
-        int size = this.size();
-        if (index < 0 || index >= size)
-            throw new IndexOutOfBoundsException("OUT OF BOUNDS!");
-        else {
-            ListNode<T> find = first;
-            for (int i = 0; i < index; i++)
-                find = find.nextNode;
-
-            return find.data;
-        }
-    }
-
-
-    */
 
 
 //  4. SPECIFIC INDEX NUMBER - KEVIN SHIELDS
@@ -205,30 +188,12 @@ public class myList<T> {
 
 
 //  7. DISPLAY NODE TOTAL - AMEED SHAIKH
- /*  public void PrintList() {
-       ListNode temp = new ListNode();
-       temp = this.first;
-        if (temp != null) {
-           System.out.print("The list contains: ");
-           while (temp != null) {
-                System.out.print(temp.data + " ");
-                temp = temp.nextNode;
-           }
-            System.out.println();
-        } else {
-           System.out.println("The list is empty.");
-      }
-   }
-*/
-//Req 7
-    public int numberOfNodes(){
+     public int numberOfNodes(){
         ListNode temp = first;
         int count = 0;
         while (temp != null) {
             count++;
             temp = temp.nextNode;
-
-           // System.out.println(count);
         }
         return count;
     }
@@ -236,84 +201,9 @@ public class myList<T> {
 
 //  8. CLEAR LIST
     public void clearList() {
+
         first = null;
     }
 
 
-
-
-
-
 }
-
-//    public void countNodes() {
-//
-//        ListNodeNode<T> temp = new ListNode<T>();
-//            temp = this.first;
-//            int i = 0;
-//            while (temp != null) {
-//                i++;
-//                temp = temp.nextNode ;
-//            }
-//            return i;
-//        }
-
-
-
-/*
-// 6 : Ameed
-//count nodes in the list
-
-//node structure
-class Node {
-    int data;
-    Node next;
-}
-
-class LinkedList {
-    Node head;
-
-    LinkedList() {
-        head = null;
-    }
-
-    int countNodes() {
-        Node temp = new Node();
-        temp = this.head;
-        int i = 0;
-        while (temp != null) {
-            i++;
-            temp = temp.next;
-        }
-        return i;
-    }
-}
-/*
-        // 7: Ameed
-//display the content of the list
-        public void PrintList() {
-            Node temp = new Node();
-            temp = this.head;
-            if (temp != null) {
-                System.out.print("The list contains: ");
-                while (temp != null) {
-                    System.out.print(temp.data + " ");
-                    temp = temp.next;
-                }
-                System.out.println();
-            } else {
-                System.out.println("The list is empty.");
-            }
-        }
-    }
-
-STEP 3
-
-
- */
-
-
-
-
-
-
