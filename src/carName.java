@@ -87,7 +87,7 @@ public class carName {
         System.out.println("STEP 6: Linked List After removing item at index ");
         carList.print();
 
-//      STEP 7 NEEDS WORK****
+//      STEP 7 SHOULD WORK NOW****
         System.out.println("\n----------------------------------------------------------");
         System.out.println("STEP 7: TOTAL NUMBER OF NODES:");
         System.out.println("The number of nodes: " + carList.numberOfNodes());
